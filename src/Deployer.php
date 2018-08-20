@@ -348,7 +348,6 @@ class Deployer extends Container
         $stats = [
             'status' => 'success',
             'command_name' => $commandEvent->getCommand()->getName(),
-            'project_hash' => empty($this->config['repository']) ? null : sha1($this->config['repository']),
             'hosts_count' => $this->hosts->count(),
             'deployer_version' => $this->getConsole()->getVersion(),
             'deployer_phar' => $this->getConsole()->isPharArchive(),
